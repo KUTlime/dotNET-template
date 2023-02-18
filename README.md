@@ -1,2 +1,2 @@
-# dotNET-template
+# .NET template
 > A .NET project template.
