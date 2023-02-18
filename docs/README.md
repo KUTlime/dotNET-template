@@ -1,3 +1,3 @@
-# [project name] documentation
+﻿# [project name] documentation
 
 > A documentation folder for
