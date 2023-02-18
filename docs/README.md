@@ -1,3 +1,3 @@
 ﻿# [project name] documentation
 
-> A documentation folder for
+> A documentation folder for [project name].
