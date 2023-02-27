@@ -75,6 +75,8 @@ dotnet_style_namespace_match_folder = true:error # IDE0130
 # Unnecessary code rules
 dotnet_code_quality_unused_parameters = all:error # IDE0060
 dotnet_remove_unnecessary_suppression_exclusions = all:error # IDE0079
+# Operator placement rules
+dotnet_style_operator_placement_when_wrapping = beginning_of_line
 ###############################
 # Naming Conventions
 ###############################
