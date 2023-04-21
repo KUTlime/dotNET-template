@@ -503,6 +503,7 @@ dotnet_diagnostic.CA1853.severity = error # https://learn.microsoft.com/en-us/do
 dotnet_diagnostic.CA1854.severity = error # https://learn.microsoft.com/en-us/dotnet/fundamentals/code-analysis/quality-rules/ca1854
 
 # 3rd party analyzer configuration
+# MoveToGlobalUsingsAnalyzer
 dotnet_diagnostic.global_usings.severity = error
 dotnet_diagnostic.global_usings.file_name = GlobalUsings.cs
 dotnet_diagnostic.global_usings.sort = true
