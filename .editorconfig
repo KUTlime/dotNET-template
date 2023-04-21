@@ -1,4 +1,6 @@
-# Used documentation revision from: 2023-01-18
+# Used documentation revision from: 2023-03-21
+root = true
+
 [*]
 charset = utf-8-bom
 indent_style = space
