@@ -39,23 +39,28 @@ max_line_length = 160
 # Organize using statements
 dotnet_sort_system_directives_first = false # IDE0055
 dotnet_separate_import_directive_groups = false # IDE0055
+
 # this. preferences
-dotnet_style_qualification_for_field = false:silent # IDE0003, IDE0009
-dotnet_style_qualification_for_property = false:silent # IDE0003, IDE0009
-dotnet_style_qualification_for_method = false:silent # IDE0003, IDE0009
-dotnet_style_qualification_for_event = false:silent # IDE0003, IDE0009
+dotnet_style_qualification_for_field = false:error # IDE0003, IDE0009
+dotnet_style_qualification_for_property = false:error # IDE0003, IDE0009
+dotnet_style_qualification_for_method = false:error # IDE0003, IDE0009
+dotnet_style_qualification_for_event = false:error # IDE0003, IDE0009
+
 # Language keywords vs BCL types preferences
 dotnet_style_predefined_type_for_locals_parameters_members = true:error # IDE0049
 dotnet_style_predefined_type_for_member_access = true:error # IDE0049
+
 # Parentheses preferences
 dotnet_style_parentheses_in_arithmetic_binary_operators = always_for_clarity:silent # IDE0047, IDE0048
 dotnet_style_parentheses_in_relational_binary_operators = always_for_clarity:silent # IDE0047, IDE0048
 dotnet_style_parentheses_in_other_binary_operators = always_for_clarity:silent # IDE0047, IDE0048
 dotnet_style_parentheses_in_other_operators = never_if_unnecessary:silent # IDE0047, IDE0048
+
 # Modifier preferences
 dotnet_style_require_accessibility_modifiers = for_non_interface_members:error # IDE0040
 csharp_preferred_modifier_order = public, private, protected, internal, static, extern, new, virtual, abstract, sealed, override, readonly, unsafe, volatile, async:error # IDE0036
 dotnet_style_readonly_field = true:error # IDE0044
+
 # Expression-level preferences
 dotnet_style_object_initializer = true:error # IDE0017
 dotnet_style_collection_initializer = true:error # IDE0028
@@ -68,17 +73,22 @@ dotnet_style_prefer_conditional_expression_over_return = true:error # IDE0046
 dotnet_style_prefer_compound_assignment = true:error # IDE0054, IDE0074
 dotnet_style_prefer_simplified_interpolation = true:error # IDE0071
 dotnet_style_prefer_simplified_boolean_expressions = true:error # IDE0075
+
 # Null-checking preferences
 dotnet_style_coalesce_expression = true:error # IDE0029, IDE0030
 dotnet_style_null_propagation = true:error # IDE0031
 dotnet_style_prefer_is_null_check_over_reference_equality_method = true:error # IDE0041
+
 # Folder structure organization
 dotnet_style_namespace_match_folder = true:error # IDE0130
+
 # Unnecessary code rules
 dotnet_code_quality_unused_parameters = all:error # IDE0060
 dotnet_remove_unnecessary_suppression_exclusions = all:error # IDE0079
+
 # Operator placement rules
 dotnet_style_operator_placement_when_wrapping = beginning_of_line
+
 ###############################
 # Naming Conventions
 ###############################
@@ -117,11 +127,11 @@ dotnet_naming_rule.private_static_fields_none.severity = warning
 ###############################
 # C# Coding Conventions
 ###############################
-[*.cs]
 # var preferences
 csharp_style_var_for_built_in_types = false:error # IDE0007, IDE0008
 csharp_style_var_when_type_is_apparent = true:error # IDE0007, IDE0008
 csharp_style_var_elsewhere = true:error # IDE0007, IDE0008
+
 # Expression-bodied members
 csharp_style_expression_bodied_constructors = true:error # IDE0021
 csharp_style_expression_bodied_methods = true:error # IDE0022
@@ -132,12 +142,14 @@ csharp_style_expression_bodied_accessors = true:error # IDE0027
 csharp_style_expression_bodied_lambdas = true:error # IDE0053
 csharp_style_expression_bodied_local_functions = true:error # IDE0061
 csharp_style_prefer_extended_property_pattern = true:error # IDE0170
+
 # Pattern matching preferences
 csharp_style_pattern_matching_over_as_with_null_check = true:error # IDE0019
 csharp_style_pattern_matching_over_is_with_cast_check = true:error # IDE0020, IDE0038
 csharp_style_prefer_switch_expression = true:error # IDE0066
 csharp_style_prefer_pattern_matching = true:error # IDE0078
 csharp_style_prefer_not_pattern = true:error # IDE0083
+
 # Expression-level preferences
 csharp_style_inlined_variable_declaration = true:error # IDE0018
 csharp_prefer_simple_default_expression = true:error # IDE0034
@@ -148,22 +160,29 @@ csharp_style_prefer_index_operator = true:error # IDE0056
 csharp_style_prefer_range_operator = true:error # IDE0057
 csharp_style_implicit_object_creation_when_type_is_apparent = true:error # IDE0090
 csharp_style_prefer_tuple_swap = true:error # IDE00180
+
 # Null-checking preferences
 csharp_style_throw_expression = true:error # IDE0016
 csharp_style_prefer_null_check_over_type_check = true:error # IDE0150
 csharp_style_conditional_delegate_call = true:error # IDE1005
+
 # Code block preferences
 csharp_prefer_braces = when_multiline:error # IDE0011
 csharp_prefer_simple_using_statement = true:error # IDE0063
+
 # using directive placement
 csharp_using_directive_placement = outside_namespace:error # IDE0065
+
 # Modifier preferences
 csharp_prefer_static_local_function = true:error # IDE0062
+
 # Unnecessary code rules
 csharp_style_unused_value_expression_statement_preference = discard_variable:error # IDE0058
 csharp_style_unused_value_assignment_preference = discard_variable:error # IDE0059
+
 # Method group rules
 csharp_style_prefer_method_group_conversion = true:error # IDE0200
+
 # Top level statements
 csharp_style_prefer_top_level_statements = true:error # IDE0210, IDE0211
 ###############################
@@ -177,10 +196,12 @@ csharp_new_line_before_finally = true # IDE0055
 csharp_new_line_before_members_in_object_initializers = true # IDE0055
 csharp_new_line_before_members_in_anonymous_types = true # IDE0055
 csharp_new_line_between_query_expression_clauses = true # IDE0055
+
 # Indentation preferences
 csharp_indent_case_contents = true # IDE0055
 csharp_indent_switch_labels = true # IDE0055
 csharp_indent_labels = flush_left # IDE0055
+
 # Space preferences
 csharp_space_after_cast = false # IDE0055 (a conflict with SA1003 & SA1009)
 csharp_space_after_keywords_in_control_flow_statements = true # IDE0055
@@ -193,9 +214,11 @@ csharp_space_around_binary_operators = before_and_after # IDE0055
 csharp_space_between_method_declaration_empty_parameter_list_parentheses = false # IDE0055
 csharp_space_between_method_call_name_and_opening_parenthesis = false # IDE0055
 csharp_space_between_method_call_empty_parameter_list_parentheses = false # IDE0055
+
 # Wrapping preferences
 csharp_preserve_single_line_statements = true # IDE0055
 csharp_preserve_single_line_blocks = true # IDE0055
+
 # Namespace organization
 csharp_style_namespace_declarations = file_scoped:error # IDE0161
 
@@ -204,19 +227,18 @@ csharp_style_namespace_declarations = file_scoped:error # IDE0161
 ###############################
 dotnet_diagnostic.IDE0001.severity = error # No corresponding option
 dotnet_diagnostic.IDE0002.severity = error # No corresponding option
+dotnet_diagnostic.IDE0003.severity = error
 dotnet_diagnostic.IDE0004.severity = error # No corresponding option
-# Remove unnecessary import https://docs.microsoft.com/en-us/dotnet/fundamentals/code-analysis/style-rules/ide0005
-dotnet_diagnostic.IDE0003.severity = none
-dotnet_diagnostic.IDE0005.severity = error
+dotnet_diagnostic.IDE0005.severity = error # No corresponding option # Remove unnecessary import https://docs.microsoft.com/en-us/dotnet/fundamentals/code-analysis/style-rules/ide0005
 dotnet_diagnostic.IDE0007.severity = error
 dotnet_diagnostic.IDE0008.severity = error
-dotnet_diagnostic.IDE0009.severity = none
+dotnet_diagnostic.IDE0009.severity = error
 dotnet_diagnostic.IDE0010.severity = error # No corresponding option
-dotnet_diagnostic.IDE0011.severity = none
-# dotnet_diagnostic.IDE0012.severity = none depricated
-# dotnet_diagnostic.IDE0013.severity = none depricated
-# dotnet_diagnostic.IDE0014.severity = none depricated
-# dotnet_diagnostic.IDE0015.severity = none depricated
+dotnet_diagnostic.IDE0011.severity = error
+# dotnet_diagnostic.IDE0012.severity = none deprecated
+# dotnet_diagnostic.IDE0013.severity = none deprecated
+# dotnet_diagnostic.IDE0014.severity = none deprecated
+# dotnet_diagnostic.IDE0015.severity = none deprecated
 dotnet_diagnostic.IDE0016.severity = error
 dotnet_diagnostic.IDE0017.severity = error
 dotnet_diagnostic.IDE0018.severity = error
@@ -248,10 +270,10 @@ dotnet_diagnostic.IDE0043.severity = error # Undocumented, see https://makolyte.
 dotnet_diagnostic.IDE0044.severity = error
 dotnet_diagnostic.IDE0045.severity = error
 dotnet_diagnostic.IDE0046.severity = error
-dotnet_diagnostic.IDE0047.severity = none
-dotnet_diagnostic.IDE0048.severity = none
+dotnet_diagnostic.IDE0047.severity = none # Parentheses preferences # https://learn.microsoft.com/en-us/dotnet/fundamentals/code-analysis/style-rules/ide0047-ide0048
+dotnet_diagnostic.IDE0048.severity = none # Parentheses preferences # https://learn.microsoft.com/en-us/dotnet/fundamentals/code-analysis/style-rules/ide0047-ide0048
 dotnet_diagnostic.IDE0049.severity = error
-# dotnet_diagnostic.IDE0050.severity = error # Depricated
+# dotnet_diagnostic.IDE0050.severity = error # deprecated
 dotnet_diagnostic.IDE0051.severity = error # No corresponding option
 dotnet_diagnostic.IDE0052.severity = error # No corresponding option
 dotnet_diagnostic.IDE0053.severity = error
@@ -268,9 +290,9 @@ dotnet_diagnostic.IDE0063.severity = error
 dotnet_diagnostic.IDE0064.severity = error
 dotnet_diagnostic.IDE0065.severity = error
 dotnet_diagnostic.IDE0066.severity = error
-# dotnet_diagnostic.IDE0067.severity = error # Depricated
-# dotnet_diagnostic.IDE0068.severity = error # Depricated
-# dotnet_diagnostic.IDE0069.severity = error # Depricated
+# dotnet_diagnostic.IDE0067.severity = error # deprecated
+# dotnet_diagnostic.IDE0068.severity = error # deprecated
+# dotnet_diagnostic.IDE0069.severity = error # deprecated
 dotnet_diagnostic.IDE0070.severity = error # No corresponding option
 dotnet_diagnostic.IDE0071.severity = error
 dotnet_diagnostic.IDE0072.severity = error # No corresponding option
