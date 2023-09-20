@@ -619,3 +619,4 @@ resharper_suggest_discard_declaration_var_style_highlighting = error
 # Links
 # IDE diagnostic list
 # https://github.com/dotnet/roslyn/blob/281de15d8e915793688eeac757aa4b3f08596d08/src/Analyzers/Core/Analyzers/IDEDiagnosticIds.cs#L9
+# https://www.jetbrains.com/help/resharper/EditorConfig_Index.html 
