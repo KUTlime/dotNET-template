@@ -9,7 +9,7 @@
   <PropertyGroup>
     <TargetFramework>net7.0</TargetFramework>
     <Nullable>enable</Nullable>
-    <WarningsAsErrors>Nullable;NU1504</WarningsAsErrors>
+    <WarningsAsErrors>Nullable;NU1504;NU1801</WarningsAsErrors>
     <ImplicitUsings>enable</ImplicitUsings>
     <LangVersion>latest</LangVersion>
     <EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
