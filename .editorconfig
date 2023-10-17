@@ -1,5 +1,5 @@
-root = true
 # Used documentation revision from: 2023-03-24
+root = true
 
 [*]
 charset = utf-8-bom
@@ -58,7 +58,7 @@ dotnet_style_parentheses_in_other_operators = never_if_unnecessary:silent # IDE0
 
 # Modifier preferences
 dotnet_style_require_accessibility_modifiers = for_non_interface_members:error # IDE0040
-csharp_preferred_modifier_order = public, private, protected, internal, static, extern, new, virtual, abstract, sealed, override, readonly, unsafe, volatile, async:error # IDE0036
+csharp_preferred_modifier_order = public, private, protected, internal, file, static, extern, new, virtual, abstract, sealed, override, readonly, unsafe, required, volatile, async:error # IDE0036
 dotnet_style_readonly_field = true:error # IDE0044
 
 # Expression-level preferences
@@ -222,27 +222,17 @@ csharp_preserve_single_line_blocks = true # IDE0055
 # Namespace organization
 csharp_style_namespace_declarations = file_scoped:error # IDE0161
 
-# Parentheses preferences
-dotnet_style_parentheses_in_arithmetic_binary_operators = never_if_unnecessary:none
-dotnet_style_parentheses_in_other_binary_operators = always_for_clarity:none
-dotnet_style_parentheses_in_relational_binary_operators = never_if_unnecessary:none
-
-# Microsoft .NET properties
-csharp_preferred_modifier_order = public, private, protected, internal, file, new, static, abstract, virtual, sealed, readonly, override, extern, unsafe, volatile, async, required:error
-dotnet_style_predefined_type_for_locals_parameters_members = true:error
-dotnet_style_predefined_type_for_member_access = true:error
-dotnet_style_require_accessibility_modifiers = for_non_interface_members:error
 ###############################
 # .NET Diagnostics
 ###############################
 dotnet_diagnostic.ide0001.severity = error # No corresponding option
 dotnet_diagnostic.ide0002.severity = error # No corresponding option
-dotnet_diagnostic.ide0003.severity = error
+dotnet_diagnostic.IDE0003.severity = error # Drives corresponding settings that are set to false. If no settings is set to false, this analyzer has no effect.
 dotnet_diagnostic.ide0004.severity = error # No corresponding option
 dotnet_diagnostic.ide0005.severity = error # No corresponding option # Remove unnecessary import https://docs.microsoft.com/en-us/dotnet/fundamentals/code-analysis/style-rules/ide0005
 dotnet_diagnostic.ide0007.severity = error
 dotnet_diagnostic.ide0008.severity = error
-dotnet_diagnostic.ide0009.severity = error
+dotnet_diagnostic.IDE0009.severity = error # Drives corresponding settings that are set to true. If no settings is set to true, this analyzer has no effect.
 dotnet_diagnostic.ide0010.severity = error # No corresponding option
 dotnet_diagnostic.ide0011.severity = error
 # dotnet_diagnostic.IDE0012.severity = none deprecated
@@ -619,4 +609,5 @@ resharper_suggest_discard_declaration_var_style_highlighting = error
 # Links
 # IDE diagnostic list
 # https://github.com/dotnet/roslyn/blob/281de15d8e915793688eeac757aa4b3f08596d08/src/Analyzers/Core/Analyzers/IDEDiagnosticIds.cs#L9
-# https://www.jetbrains.com/help/resharper/EditorConfig_Index.html 
+# Jetbrains R# setup index
+# https://www.jetbrains.com/help/resharper/EditorConfig_Index.html
