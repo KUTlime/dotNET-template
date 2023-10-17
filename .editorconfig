@@ -41,10 +41,10 @@ dotnet_sort_system_directives_first = false # IDE0055
 dotnet_separate_import_directive_groups = false # IDE0055
 
 # this. preferences
-dotnet_style_qualification_for_field = false:error # IDE0003, IDE0009
-dotnet_style_qualification_for_property = false:error # IDE0003, IDE0009
-dotnet_style_qualification_for_method = false:error # IDE0003, IDE0009
-dotnet_style_qualification_for_event = false:error # IDE0003, IDE0009
+dotnet_style_qualification_for_field = false:error # IDE0003 (for false values), IDE0009 (for true values)
+dotnet_style_qualification_for_property = false:error # IDE0003 (for false values), IDE0009 (for true values)
+dotnet_style_qualification_for_method = false:error # IDE0003 (for false values), IDE0009 (for true values)
+dotnet_style_qualification_for_event = false:error # IDE0003 (for false values), IDE0009 (for true values)
 
 # Language keywords vs BCL types preferences
 dotnet_style_predefined_type_for_locals_parameters_members = true:error # IDE0049
