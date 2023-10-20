@@ -14,7 +14,7 @@ None.
 
 No performance hit.
 
-## Security 
+## Security
 
 No security issue.
 
