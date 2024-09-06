@@ -1,17 +1,27 @@
-<Project>
+﻿<Project>
   <PropertyGroup>
-    <ParentDirectoryBuildProps>$([MSBuild]::GetPathOfFileAbove('Directory.Build.props', '$(MSBuildThisFileDirectory)../'))</ParentDirectoryBuildProps>
-    <Import Project="$(ParentDirectoryBuildProps)" Condition="Exists($(ParentDirectoryBuildProps))"/>
+    <ParentDirectoryPackagesProps>$([MSBuild]::GetPathOfFileAbove('Directory.Packages.props', '$(MSBuildThisFileDirectory)../'))</ParentDirectoryPackagesProps>
+  </PropertyGroup>
+  <Import Project="$(ParentDirectoryPackagesProps)" Condition="Exists($(ParentDirectoryPackagesProps))" />
+  <PropertyGroup>
     <ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
   </PropertyGroup>
   <ItemGroup Condition="'$(MSBuildProjectExtension)' != '.dcproj'">
-    <PackageReference Include="StyleCop.Analyzers" Version="*-*">
-      <PrivateAssets>all</PrivateAssets>
+    <GlobalPackageReference Include="StyleCop.Analyzers" Version="1.2.0-beta.556">
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-    </PackageReference>
-    <PackageReference Include="MoveToGlobalUsingsAnalyzer" Version="*-*">
       <PrivateAssets>all</PrivateAssets>
+    </GlobalPackageReference>
+    <GlobalPackageReference Include="MoveToGlobalUsingsAnalyzer" Version="1.4.0">
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-    </PackageReference>
+      <PrivateAssets>all</PrivateAssets>
+    </GlobalPackageReference>
+    <GlobalPackageReference Include="Meziantou.Analyzer" Version="2.0.163">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </GlobalPackageReference>
+    <GlobalPackageReference Include="CSharpGuidelinesAnalyzer" Version="3.8.5">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </GlobalPackageReference>
   </ItemGroup>
 </Project>
